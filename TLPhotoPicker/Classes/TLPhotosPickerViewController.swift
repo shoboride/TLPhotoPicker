@@ -323,7 +323,7 @@ open class TLPhotosPickerViewController: UIViewController {
         }
     }
     
-    open func maxCheck() -> Bool {
+    open func maxCheck(_ nextType: TLPHAsset.AssetType = .photo) -> Bool {
         deselectWhenUsingSingleSelectedMode()
         if let max = self.configure.maxSelectedAssets, max <= self.selectedAssets.count {
             self.delegate?.didExceedMaximumNumberOfSelection(picker: self)
